@@ -1,0 +1,17 @@
+# Web server
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20        # file uploads (PDF)
+
+# Config
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+
+# PDF parsing
+pymupdf==1.25.1                 # fast text extraction
+pdfplumber==0.11.4             # table-aware extraction
+
+# RAG: embeddings store + LLM
+chromadb==0.6.3                # persistent on-disk vector store
+openai==1.59.6                # LLM (gpt-4o-mini) + embeddings (text-embedding-3-small)
+rank-bm25==0.2.2              # lexical (BM25) half of hybrid retrieval

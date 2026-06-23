@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annual Report RAG</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">RAG</span>
+      <span>Annual report analyzer</span>
+    </div>
+    <div id="index-status" class="muted">loading…</div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: chat -->
+    <section class="panel chat">
+      <div class="panel-head">
+        <h2>Chat</h2>
+        <select id="company-filter" aria-label="Filter by report">
+          <option value="">All reports</option>
+        </select>
+      </div>
+
+      <div id="messages" class="messages">
+        <div class="empty-hint" id="chat-hint">
+          Ask a question about the ingested reports — e.g.
+          <em>"What are ASML's sustainability goals?"</em>
+        </div>
+      </div>
+
+      <form id="chat-form" class="composer" autocomplete="off">
+        <input id="question" type="text" placeholder="Ask about the reports…" required />
+        <button type="submit" id="send-btn" aria-label="Send">Ask</button>
+      </form>
+    </section>
+
+    <!-- RIGHT: dashboard -->
+    <aside class="panel dashboard">
+      <div class="panel-head">
+        <h2>Pre-extracted data</h2>
+        <button id="upload-toggle" class="btn-small">+ Upload</button>
+      </div>
+
+      <form id="upload-form" class="upload-form hidden">
+        <input id="upload-company" type="text" placeholder="Company name (e.g. Heineken)" required />
+        <input id="upload-file" type="file" accept="application/pdf" required />
+        <div class="upload-actions">
+          <button type="submit" id="upload-btn">Ingest PDF</button>
+          <span id="upload-status" class="muted"></span>
+        </div>
+      </form>
+
+      <div id="facts" class="facts">
+        <div class="empty-hint">No reports ingested yet.</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

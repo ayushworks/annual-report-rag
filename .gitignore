@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Persisted data (vector store + sqlite) — regenerated on ingest
+data/
+
+# Uploaded / bundled report PDFs — too large to commit; users upload their own
+reports/*.pdf
+
+# OS
+.DS_Store
+
+# Editors / tooling
+.idea/
+.vscode/
+.claude/
