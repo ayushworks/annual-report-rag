@@ -83,7 +83,7 @@ sustainability targets.
 
 ### Chat flow
 
-![img_2.png](img_2.png)
+![img_6.png](img_6.png)
 
 ### Results
 
